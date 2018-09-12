@@ -6,30 +6,35 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            // Print in console.
+            
             Console.WriteLine("Application starts...");
-            //Console.WriteLine("Please Enter first name");
-            // Takes value from console
-            //String fname = Console.ReadLine();
-            //Console.WriteLine("Please Enter last name");
-            //String lname = Console.ReadLine();
-            //placeholder
-            //Console.WriteLine("Your name {0} {1}",fname ,lname);
-            //concatenation
-            //Console.WriteLine("Your name " + fname + " " + lname);
+            Console.WriteLine("Enter Your Number");
+            int lmt = 0;
+            bool isNumber =   int.TryParse(Console.ReadLine(), out lmt);
 
-            // variable declaration
+            if (isNumber)
+            {
+                Console.WriteLine("For loop started!");
+                for (int i = 0; i < lmt; i++)
+                {
+                    Console.WriteLine(i+'\n'); 
+                }
+                Console.WriteLine("Loop Ended!");
+                //Console.WriteLine("While loop started!");
+                //int start = 0;
+                //while (start <= lmt) {
+                //    Console.WriteLine(start + '\n');
+                //    start = start + 2;
+                //}
+                //Console.WriteLine("While loop Ended!");
 
-            //Boolean b = true;
-            //int i = 0;
+            }
+            else
+            {
+                Console.WriteLine("Please enter valid number");
+            }
 
-            //Console.WriteLine("Int Min value : " + int.MinValue + " Max value :" + int.MaxValue);
-            //Console.WriteLine("Short Min value : " + short.MinValue + " Max value :" + short.MaxValue);
-
-            //String s = "ONE\nTWO\nThree";
-            //String s = "it's a pencil.";
-            //Console.WriteLine(s);
-
+            
         }
     }
 }
