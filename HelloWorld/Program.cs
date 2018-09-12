@@ -8,28 +8,30 @@ namespace HelloWorld
         {
             // Print in console.
             Console.WriteLine("Application starts...");
-            //Console.WriteLine("Please Enter first name");
-            // Takes value from console
-            //String fname = Console.ReadLine();
-            //Console.WriteLine("Please Enter last name");
-            //String lname = Console.ReadLine();
-            //placeholder
-            //Console.WriteLine("Your name {0} {1}",fname ,lname);
-            //concatenation
-            //Console.WriteLine("Your name " + fname + " " + lname);
+            //convert implicitly (datatype convert automatic by the complier when there is no loss of data and no exception throwing)
 
-            // variable declaration
+            int ival = 100;
+            float fval = ival;
 
-            //Boolean b = true;
-            //int i = 0;
+            Console.WriteLine("Implicit conversion : {0}", fval);
+            //throwing an exception because fractional part will be loss on implicit conversion.
+            //need to convert explicitly with (int)
+             fval = 99999999929.233F;
+            //ival = (int) fval;
+            //ival = Convert.ToInt32(fval);
+            //convert string into int
+            string str = "100ab";
+            int result = 0;
+            //parse() convert string into integer and throw exception if value is not integer
+            ival = int.Parse(str);
 
-            //Console.WriteLine("Int Min value : " + int.MinValue + " Max value :" + int.MaxValue);
-            //Console.WriteLine("Short Min value : " + short.MinValue + " Max value :" + short.MaxValue);
+            //TryParse() convert string into integer and return 0 or 1. if value is not integer.
+            int.TryParse(str, out result);
 
-            //String s = "ONE\nTWO\nThree";
-            //String s = "it's a pencil.";
-            //Console.WriteLine(s);
+            Console.WriteLine("Explicit conversion : {0}", result);
+
 
         }
     }
 }
+
