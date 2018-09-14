@@ -8,28 +8,16 @@ namespace HelloWorld
         {
             // Print in console.
             Console.WriteLine("Application starts...");
-            //Console.WriteLine("Please Enter first name");
-            // Takes value from console
-            //String fname = Console.ReadLine();
-            //Console.WriteLine("Please Enter last name");
-            //String lname = Console.ReadLine();
-            //placeholder
-            //Console.WriteLine("Your name {0} {1}",fname ,lname);
-            //concatenation
-            //Console.WriteLine("Your name " + fname + " " + lname);
+            YrMethods yrM = new YrMethods();
+            String str = yrM.str();
+            //string
+            Console.WriteLine(str);
+            //sum
+            int sum = YrMethods.add(4, 40);
+            Console.WriteLine("add : {0}",sum);
 
-            // variable declaration
-
-            //Boolean b = true;
-            //int i = 0;
-
-            //Console.WriteLine("Int Min value : " + int.MinValue + " Max value :" + int.MaxValue);
-            //Console.WriteLine("Short Min value : " + short.MinValue + " Max value :" + short.MaxValue);
-
-            //String s = "ONE\nTWO\nThree";
-            //String s = "it's a pencil.";
-            //Console.WriteLine(s);
-
+            int minus = YrMethods.subtract(4, 40);
+            Console.WriteLine("Subtract : {0}", minus);
         }
     }
 }
