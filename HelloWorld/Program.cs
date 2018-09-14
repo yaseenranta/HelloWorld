@@ -6,30 +6,47 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            // Print in console.
-            Console.WriteLine("Application starts...");
-            //Console.WriteLine("Please Enter first name");
-            // Takes value from console
-            //String fname = Console.ReadLine();
-            //Console.WriteLine("Please Enter last name");
-            //String lname = Console.ReadLine();
-            //placeholder
-            //Console.WriteLine("Your name {0} {1}",fname ,lname);
-            //concatenation
-            //Console.WriteLine("Your name " + fname + " " + lname);
+            String[] items = new String[4];
 
-            // variable declaration
+            items[1] = "Small";
+            items[2] = "Medium";
+            items[3] = "Large";
 
-            //Boolean b = true;
-            //int i = 0;
+            Console.WriteLine("            |----------------------------|\n            |   Welcome to coffee shop   |            \n            |----------------------------|");
+            String userChoice = "";
+            int result = 0;
+            do
+            {
+                Boolean isNumber = false;
+                do
+                {
+                    Console.WriteLine("Select Coffee Type");
+                    Console.WriteLine("1 for small - 2 for medium - 3 for large");
+                    string userChoiceS = Console.ReadLine();
+                    
+                    isNumber = int.TryParse(userChoiceS, out result);
+                    if (isNumber)
+                    {
+                        
+                        do {
+                            Console.WriteLine("Do You Want to order another Item. Please Select yes or no.");
+                            userChoice = Console.ReadLine().ToUpper();
 
-            //Console.WriteLine("Int Min value : " + int.MinValue + " Max value :" + int.MaxValue);
-            //Console.WriteLine("Short Min value : " + short.MinValue + " Max value :" + short.MaxValue);
+                        } while (userChoice != "YES" && userChoice != "NO");
 
-            //String s = "ONE\nTWO\nThree";
-            //String s = "it's a pencil.";
-            //Console.WriteLine(s);
+                        
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please select valid option");
+                    }
 
+
+                } while (!isNumber);
+                
+            } while (userChoice == "YES");
+            
+            Console.WriteLine("You order : {0} coffee",items[result]);
         }
     }
 }
