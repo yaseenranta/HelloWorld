@@ -1,5 +1,5 @@
 ﻿using System;
-
+using LivingBeings.Animal;
 namespace HelloWorld
 {
     class Program
@@ -8,28 +8,55 @@ namespace HelloWorld
         {
             // Print in console.
             Console.WriteLine("Application starts...");
-            //Console.WriteLine("Please Enter first name");
-            // Takes value from console
-            //String fname = Console.ReadLine();
-            //Console.WriteLine("Please Enter last name");
-            //String lname = Console.ReadLine();
-            //placeholder
-            //Console.WriteLine("Your name {0} {1}",fname ,lname);
-            //concatenation
-            //Console.WriteLine("Your name " + fname + " " + lname);
+            Console.WriteLine("Namespace practice");
+            Console.WriteLine(cat.legs());
+            Console.WriteLine(Dog.legs());
+        }
+    }
+}
 
-            // variable declaration
+namespace LivingBeings{
+    namespace Animal{
+        class cat{
 
-            //Boolean b = true;
-            //int i = 0;
+                public static String legs()
+                {
 
-            //Console.WriteLine("Int Min value : " + int.MinValue + " Max value :" + int.MaxValue);
-            //Console.WriteLine("Short Min value : " + short.MinValue + " Max value :" + short.MaxValue);
+                    String str = "Cat have 4 legs";
+                    return str;
+                }
 
-            //String s = "ONE\nTWO\nThree";
-            //String s = "it's a pencil.";
-            //Console.WriteLine(s);
+                public static String isWalk(){
 
+                    String str = "yes";
+                    return str;
+                }
+        }
+    }
+}
+//namespace organize the code. Namespace avoids to conflict between methods
+//namespace don't corresponds to file,directory, or assembles. They could be written in separate file or projects.
+
+namespace LivingBeings
+{
+    namespace Animal
+    {
+        class Dog
+        {
+
+            public static String legs()
+            {
+
+                String str = "cats have 4 legs";
+                return str;
+            }
+
+            public static String isWalk()
+            {
+
+                String str = "yes";
+                return str;
+            }
         }
     }
 }
