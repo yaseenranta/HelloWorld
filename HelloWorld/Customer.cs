@@ -2,21 +2,34 @@
 
 class Customer {
 
-    String _fullname;
-
-    //constructor 
-    public Customer() {
-        Console.WriteLine("Customer class Initialized");
+    protected String _fullname;
+    protected String _email;
+    /*
+    * Class have more then one constructor with different signature 
+    * Contructor don't return any data type
+    * 
+    */
+    //constructor
+    public Customer()
+    {
+        
     }
-    //instance method
-    public Customer(String Fullname)
+
+
+    public Customer(String Fullname,String Email)
     {        
         this._fullname = Fullname;
+        this._email = Email;
+
+        
     }
 
+
+    //instance method
     public void print() {
         
         Console.WriteLine("Customer name = {0}", this._fullname);
+        Console.WriteLine("Customer email = {0}", this._email);
     }
 
     //destructor
