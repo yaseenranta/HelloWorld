@@ -39,11 +39,21 @@
             //Customer ctm = new Order();
             Customer ctm = odr;
             ctm.print();
+        // polymorphism enable us invoked derived or child class method using parent class reference variable.
 
-        
-        
+        Employee[] Emp = new Employee[4];
+
+        Emp[0] = new Employee();
+        Emp[1] = new ParttimeEmployee("Muhammad","Yaseen");
+        Emp[2] = new FulltimeEmployee("Muhammad", "Owais");
+        Emp[3] = new TempEmployee("Muhammad","Talha");
+
+        foreach(Employee e in Emp)
+        {
+            e.print();
+        }
     }
 
 
-    }
+}
 
