@@ -21,6 +21,12 @@ namespace HelloWorld
             std.Id = 1;
             std.Name = "Muhammad Yaseen";
             Console.WriteLine("Student id : {0}, Student Name : {1}, Student passing Marks : {2}", std.Id, std.Name, std.Passmark);
+
+            //create struct object in stack and reference variable of chk "check" store in heap, point to struct object.
+            chk check = new chk();
+            check.Id = 1;
+            check.Email = "yaseenranta76@gmail.com";
+            check.print();
         }
     }
 }
