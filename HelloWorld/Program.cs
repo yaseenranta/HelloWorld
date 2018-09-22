@@ -19,7 +19,6 @@ namespace HelloWorld
 
             StudentResult.printDetail();
 
-
         }
     }
 
