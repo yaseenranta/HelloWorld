@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.IO;
 namespace HelloWorld
 {
     class Program
@@ -8,6 +8,14 @@ namespace HelloWorld
         {
             // Print in console.
             Console.WriteLine("Application starts...");
+            //ExceptionExample ee = new ExceptionExample();
+
+            //ee.example1();
+            //ee.example2();
+
+            //CustomException ce = new CustomException("File not found");
+            //Console.WriteLine(ce.Message);
+
         }
     }
 }
